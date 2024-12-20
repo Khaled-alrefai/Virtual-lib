@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual-Library</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="lib-name">
+            <h1>المكتبة<span>-</span>الافتراضية</h1>
+        </div>
+        <div class="links">
+            <a href="./Index.html"><i>الرئيسية</i></a>
+            <a href="./book.html"><i>الكتب المتوفرة</i></a>
+            <a href="./about.html"><i>من نحن</i></a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>الكتب المتاحة للبيع حالياً :</h1>
+        <table class="mytable">
+            <tr>
+                <td class="titletd">رقم الكتاب</td>
+                <td class="titletd">العنوان</td>
+                <td class="titletd">السعر</td>
+                <td class="titletd">إظهار التفاصيل</td>
+                <td class="titletd" name="book">اختيار</td>
+
+            </tr>
+            <tr>
+                <td>11111</td>
+                <td>البرمجة بلغة C# خطوة بخطوة</td>
+                <td>3500</td>
+                <td><input type="checkbox" id="checkbox1"></td>
+                <td><input type="radio" name="book" value="book1"></td>
+            </tr>
+            <tr class="my-row">
+                <td colspan="5" class="book1" id="myhiddenrow">
+                    <h2><span style="color: black;">الناشر : </span>غير معروف</h2>
+                    <h2><span style="color: black;">التصنيف : </span>علوم حاسوب/ برمجة</h2>
+                    <h2><span style="color: black;">الملخص : </span>كتاب يحوي على الأساسيات لتعلم لغة ال C# بالإضافة إلى
+                        نصائح برمجية متعددة</h2>
+                    <h2><span style="color: black;">صورة الكتاب : </span></h2>
+                    <img src="./imge/csharp.webp" alt="csharp_programming" width="200">
+
+                </td>
+            </tr>
+            <tr>
+                <td>22222</td>
+                <td>تصميم قواعد البيانات</td>
+                <td>3000</td>
+                <td><input type="checkbox" id="checkbox2"></td>
+                <td><input type="radio" name="book" value="book2"></td>
+
+            </tr>
+            <tr class="my-row">
+                <td colspan="5" class="book2" id="myhiddenrow">
+                    <h2><span style="color: black;">الناشر : </span>غير معروف</h2>
+                    <h2><span style="color: black;">التصنيف : </span>علوم حاسوب/ قواعد بيانات </h2>
+                    <h2><span style="color: black;">الملخص : </span>كتاب يحوي على شرح مفصل لبناء قواعد البيانات بالإضافة
+                        إلى تنسيق الكيانات وتسوية قواعد البيانات</h2>
+                    <h2><span style="color: black;">صورة الكتاب : </span></h2>
+                    <img src="./imge/database.webp" alt="database_programming" width="200">
+                </td>
+            </tr>
+            <tr>
+                <td>33333</td>
+                <td>برمجة الويب باستخدام ASP.NET</td>
+                <td>4000</td>
+                <td><input type="checkbox" id="checkbox3"></td>
+                <td><input type="radio" name="book" value="book3"></td>
+
+            </tr>
+            <tr class="my-row">
+                <td colspan="5" class="book3" id="myhiddenrow">
+                    <h2><span style="color: black;">الناشر : </span>غير معروف</h2>
+                    <h2><span style="color: black;">التصنيف : </span>علوم حاسوب/ برمجة الويب </h2>
+                    <h2><span style="color: black;">الملخص : </span>كتاب يحوي على كافة التفاصيل لبناء مواقع ويب باستخدام
+                        إطار DotNet Core</h2>
+                    <h2><span style="color: black;">صورة الكتاب : </span></h2>
+                    <img src="./imge/aspnet_core.webp" alt="Asp_programming" width="200">
+                </td>
+            </tr>
+            <tr>
+                <td>44444</td>
+                <td>البرمجة بلغة بايثون</td>
+                <td>2700</td>
+                <td><input type="checkbox" id="checkbox4"></td>
+                <td><input type="radio" name="book" value="book4"></td>
+
+            </tr>
+            <tr class="my-row">
+                <td colspan="5" class="book4" id="myhiddenrow">
+                    <h2><span style="color: black;">الناشر : </span>غير معروف</h2>
+                    <h2><span style="color: black;">التصنيف : </span>علوم حاسوب/ برمجة بايثون </h2>
+                    <h2><span style="color: black;">الملخص : </span>كتاب يحوي على كافة التفاصيل الخاصة ببناء تطبيقات
+                        بلغة بايثون </h2>
+                    <h2><span style="color: black;">صورة الكتاب : </span></h2>
+                    <img src="./imge/python.webp" alt="python_programming" width="200">
+                </td>
+            </tr>
+            <tr>
+                <td>55555</td>
+                <td>مدخل إلى البرمجة باستخدام لغة C++</td>
+                <td>3150</td>
+                <td><input type="checkbox" id="checkbox5"></td>
+                <td><input type="radio" name="book" value="book5"></td>
+
+            </tr>
+            <tr class="my-row">
+                <td colspan="5" class="book5" id="myhiddenrow">
+                    <h2><span style="color: black;">الناشر : </span>غير معروف</h2>
+                    <h2><span style="color: black;">التصنيف : </span>علوم حاسوب/ برمجة </h2>
+                    <h2><span style="color: black;">الملخص : </span>كتاب يحوي على كافة التفاصيل لتعلم لغة البرمجة C++
+                    </h2>
+                    <h2><span style="color: black;">صورة الكتاب : </span></h2>
+                    <img src="./imge/cplus.webp" alt="c++_programming" width="200">
+                </td>
+            </tr>
+        </table>
+        <input type="submit" name="" value="متابعة" id="my_submit">
+        <p id="try"></p>
+
+        <form action="" id="my-form">
+            <div>
+                <h2>أدخل اسمك الكامل بالعربي : </h2>
+                <input type="text" id="person_name">
+            </div>
+            <div>
+                <h2>أدخل رقمك الوطني : </h2>
+                <input type="text" id="nation_id" required>
+            </div>
+            <div>
+                <h2>أدخل تاريخ الولادة : </h2>
+                <input type="date">
+            </div>
+            <div>
+                <h2>أدخل رقم هاتفك : </h2>
+                <input type="text" id="phone_num">
+            </div>
+            <div>
+                <h2>أدخل عنوان بريدك الالكتروني : </h2>
+                <input type="email">
+            </div>
+            <input type="submit" value="إرسال المعلومات " id="my_form_submit">
+        </form>
+    </div>
+
+    <script type="text/javascript" src="./myFunctions.js"></script>
+
+</body>
+
+</html>
