@@ -1,8 +1,9 @@
 // تحديد جميع checkboxes 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+// تحديد جميع الصفوف المخفية
 const hiddenRows = document.querySelectorAll('.my-row');
 
-// إضافة حدث  checkboxes
+//  إضافة حدث عند اختيار أحد  checkboxes
 checkboxes.forEach((checkbox, index) => {
     checkbox.addEventListener('change', () => {
         if (checkbox.checked) {
@@ -13,37 +14,51 @@ checkboxes.forEach((checkbox, index) => {
     });
 });
 
-// submit button 
+// تحديد الزر المسؤول عن اظهار الفورم
 const button = document.getElementById('my_submit');
+// تحديد رسالة الخطأ
 const output = document.getElementById('try');
 
-// form 
+// تحديد الفورم
 const my_form = document.getElementById('my-form');
 
+// عند الضغط على زر اظهار الفورم
 button.addEventListener('click', () => {
+    // معرفة زر الراديو المحدد
     const selectedRadio = document.querySelector('input[name="book"]:checked');
+    // إذا كان الزر محدد
     if (selectedRadio) {
         const radioValue = selectedRadio.value;
         output.textContent = '';
         my_form.style.display = 'block';
-    } else {
+    }
+    // في حال الزر غير محدد
+    else {
+        // رسالة الخطأ
         output.textContent = 'Please select a book.';
     }
 });
 
-// what to do when form submit
+// ماذا يفعل الفورم عندما نضغط على زر إرسال الفورم
+
+// تحديد زر ارسال الفورم
 const my_form_submit = document.getElementById('my_form_submit');
+// تحديد الإدخال الخاص برقم الشخص
 const person_num = document.getElementById('per_num');
+// تحديد الإدخال الخاص برقم الهاتف
 const phone_num = document.getElementById('phone_num');
+// تحديد الإدخال الخاص بالرقم الوطني
 const nation_id = document.getElementById('nation_id');
+// تحديد الإدخال الخاص باسم الشخص
 const person_name = document.getElementById('person_name');
 
+// عند الضغط على زر غرسال الفورم
 my_form_submit.addEventListener('click', (event) => {
     //التحقق من الاسم بالعربي
     let pattern = /^[\u0621-\u064A\s]+$|^$/;
     if (!pattern.test(person_name.value)) {
         alert('اسم المستخدم غير صحيح');
-        event.preventDefault();  // منع إرسال النموذج حتى يتم إدخال رقم صحيح
+        event.preventDefault();  // منع إرسال النموذج حتى يتم إدخال اسم صحيح
         return;
     }
     //التحقق من صحة الرقم الوطني
@@ -61,6 +76,7 @@ my_form_submit.addEventListener('click', (event) => {
         return;
     }
 
+    // ملاحظة يتم التحقق من البريد الالكتروني عن طريق html
 
     // التحقق من اختيار الكتاب
     const selectedRadio = document.querySelector('input[name="book"]:checked');
@@ -70,6 +86,7 @@ my_form_submit.addEventListener('click', (event) => {
         return;
     }
 
+    // معرفة زر الراديو المحدد (الكتاب المحدد)
     const radioValue = selectedRadio.value;
 
     // استخدم القيمة الكاملة كاسم للفئة
@@ -78,12 +95,12 @@ my_form_submit.addEventListener('click', (event) => {
     // تحويل HTMLCollection إلى مصفوفة لاستخدام forEach
     const h2Array = Array.from(h2Elements);
 
-    // تجميع النصوص من عناصر h2
+    // تجميع نصوص الكتاب لعرضها 
     let message = '';
     h2Array.forEach((h2) => {
         message += h2.textContent + ' ';
     });
 
-    // عرض رسالة الشكر
+    //  عرض رسالة الشكر مع معلومات الكتاب
     alert(`Thank you for buying this book: ${message}`);
 });
